@@ -1,4 +1,4 @@
-import { RestaurantInfo_API1, RestaurantInfo_API2 } from '../constant';
+import { RestaurantInfo_API } from '../constant';
 import { useEffect, useState } from "react";
 
 const useFetchRestaurantInfo = (restId) => {
@@ -11,7 +11,7 @@ const useFetchRestaurantInfo = (restId) => {
 
     const fetchRestaurantInfo = async () => {
         try {
-            const response = await fetch(RestaurantInfo_API1 + restId + RestaurantInfo_API2);
+            const response = await fetch(RestaurantInfo_API + restId);
             const { data } = await response.json();
 
             setMenu(data?.cards[data?.cards.length - 1]?.groupedCard?.cardGroupMap?.REGULAR?.cards);

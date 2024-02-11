@@ -42,12 +42,12 @@ const Cart = () => {
                 <div className='flex justify-between mb-2'>
                     <h2 className='flex items-center gap-2'>
                         <RiEBike2Line className='inline-block' /> Delivery charges</h2>
-                    <p>₹{itemTotal === 0 ? "0" : "100.00"}</p>
+                    <p>₹{!itemTotal ? "0" : "100.00"}</p>
                 </div>
                 <div className='flex justify-between mb-2'>
                     <h2 className='flex items-center gap-2'>
                         <MdOutlineBook className='inline-block' /> Platform fee</h2>
-                    <p>₹{itemTotal === 0 ? "0" : "5.00"}</p>
+                    <p>₹{!itemTotal ? "0" : "5.00"}</p>
                 </div>
                 <hr className='bg-black w-full my-2' />
                 <div className='flex justify-between'>
@@ -57,9 +57,9 @@ const Cart = () => {
                 </div>
                 <button className={twMerge(["flex justify-between items-center gap-6",
                     "mx-auto mt-5 px-3 py-1 rounded-lg bg-gray-900 text-white",
-                    (itemTotal === 0 ? "opacity-70" : "opacity-100")])} opacity-50>
+                    !itemTotal ? "opacity-70" : "opacity-100"])}>
                     <div>
-                        <p className='text-sm font-semibold'>₹{itemTotal === 0 ? "0" :
+                        <p className='text-sm font-semibold'>₹{!itemTotal ? "0" :
                             (Math.round(itemTotal * 108) / 100 + 105.00)}</p>
                         <p className='text-sm'>Total</p>
                     </div>
