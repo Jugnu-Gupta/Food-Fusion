@@ -2,7 +2,7 @@ import React from 'react';
 import useFetchRestaurantInfo from '../Hooks/useFetchRestaurantInfo';
 import RestaurantCuisine from '../components/RestaurantCuisine';
 import { useParams } from 'react-router-dom';
-import { Swiggy_IMG } from '../constant';
+import { IMG_API } from '../constant';
 import { FaStar } from 'react-icons/fa';
 import RestShimmer from '../components/shimmer/RestShimmer';
 
@@ -18,7 +18,7 @@ const Restaurant = () => {
                 <div className='bg-gray-900 py-5 px-6 w-full'>
                     <div className="max-w-4xl w-full mx-auto text-white flex items-center justify-start gap-5 sm:gap-10">
                         <div>
-                            <img className='w-60 h-48 rounded-md' src={Swiggy_IMG + restaurantInfo?.cloudinaryImageId} alt="Restuarant Img" />
+                            <img className='w-60 h-48 rounded-md' src={IMG_API + restaurantInfo?.cloudinaryImageId} alt="Restuarant Img" />
                         </div>
                         <div>
                             <h1 className='font-bold text-2xl'>{restaurantInfo?.name}</h1>

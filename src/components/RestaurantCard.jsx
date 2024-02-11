@@ -1,5 +1,5 @@
 import React from 'react'
-import { Swiggy_IMG } from '../constant';
+import { IMG_API } from '../constant';
 import { FaStar } from "react-icons/fa";
 
 
@@ -8,7 +8,7 @@ const RestaurantCard = ({ restaurant }) => {
 
     return (
         <div className={'w-64 rounded-lg p-2 h-full hover:shadow-xl hover:scale-110 transition-all duration-200'} style={{ boxShadow: "0px 1px 10px #D3D3D3" }}>
-            <img className='w-full h-48 rounded-md pb-1' src={Swiggy_IMG + restaurant?.info?.cloudinaryImageId} alt="Restuarant Img" />
+            <img className='w-full h-48 rounded-md pb-1' src={IMG_API + restaurant?.info?.cloudinaryImageId} alt="Restuarant Img" />
             <h1 className='font-bold text-xl'>{restaurant?.info?.name}</h1>
             <div className='flex justify-start items-center'>
                 <FaStar className='bg-green-600 rounded-full text-white p-[3px] w-5 h-5' />

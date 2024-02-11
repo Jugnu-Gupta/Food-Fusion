@@ -1,5 +1,5 @@
 import React from 'react';
-import { Swiggy_IMG } from '../constant';
+import { IMG_API } from '../constant';
 import ItemQtyCounter from './ItemQtyCounter';
 
 
@@ -17,7 +17,7 @@ const FootItem = ({ foodItem, printLine }) => {
                     <p className='text-gray-700 font-normal text-sm pt-2'>{foodItem?.description}</p>
                 </div>
                 <div className='w-40 flex flex-col justify-center items-center'>
-                    {foodItem?.imageId && <div className='w-40'><img className="w-full h-32 rounded-md" src={Swiggy_IMG + foodItem?.imageId} alt="" /></div>}
+                    {foodItem?.imageId && <div className='w-40'><img className="w-full h-32 rounded-md" src={IMG_API + foodItem?.imageId} alt="" /></div>}
                     <ItemQtyCounter foodItem={foodItem} />
                 </div>
             </div>

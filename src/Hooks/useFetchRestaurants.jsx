@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-// import Swiggy_API from '../constant/Links';
+import { Restaurants_API } from '../constant';
 
 const useFetchRestaurants = () => {
     const [restaurantList, setRestaurantList] = useState([]);
@@ -10,7 +10,8 @@ const useFetchRestaurants = () => {
 
     const fetchRestaurants = async () => {
         try {
-            const response = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.7040592&lng=77.10249019999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+            // const response = await fetch("https://www.swiggy.com/dapi/restaurants/list/v5?lat=28.7040592&lng=77.10249019999999&is-seo-homepage-enabled=true&page_type=DESKTOP_WEB_LISTING");
+            const response = await fetch(Restaurants_API);
             const { data } = await response.json();
 
             // console.log(data?.cards);
