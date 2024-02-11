@@ -8,7 +8,6 @@ import { twMerge } from 'tailwind-merge';
 
 const RestaurantCuisine = ({ foodItems, title }) => {
     const [hideItems, setHideItems] = useState(false);
-    // console.log(foodItems);
 
     return (
         <div className='px-5 bg-white'>
@@ -20,7 +19,9 @@ const RestaurantCuisine = ({ foodItems, title }) => {
                             <Shimmer classess="w-10 h-6 mr-5 rounded-md" />
                         </>
                         : <>
-                            <h1 className={twMerge('text-xl font-bold', (hideItems ? 'mb-5' : ''))}>{title + ` (${foodItems.length})`}</h1>
+                            <h1 className={twMerge('text-xl font-bold', (hideItems ? 'mb-5' : ''))}>
+                                {title + ` (${foodItems.length})`}</h1>
+
                             <button onClick={() => setHideItems(!hideItems)}>
                                 {!hideItems ?
                                     <FaChevronUp className='mr-5 text-lg' />

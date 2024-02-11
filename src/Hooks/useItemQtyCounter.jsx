@@ -23,7 +23,8 @@ const useItemQtyCounter = () => {
             const foodInfo = {
                 id: foodItem?.id,
                 name: foodItem?.name,
-                price: foodItem?.price || foodItem?.variantsV2?.pricingModels[0]?.price,
+                price: foodItem?.price ||
+                    foodItem?.variantsV2?.pricingModels[0]?.price,
                 quantity: 1,
                 description: foodItem?.description,
                 imageId: foodItem?.imageId,

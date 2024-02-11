@@ -23,9 +23,15 @@ const Navbar = () => {
                 }
 
                 <div className='flex gap-6 items-center xs:gap-3'>
-                    <Link to="/"><h2 className='font-bold text-sm xs:text-xs text-gray-700'>Home</h2></Link>
-                    <Link to="/about"><h2 className='font-bold text-sm xs:text-xs text-gray-700'>About</h2></Link>
-                    <Link to="/contact"><h2 className='font-bold text-sm xs:text-xs text-gray-700'>Contact</h2></Link>
+                    <Link to="/">
+                        <h2 className='font-bold text-sm xs:text-xs text-gray-700'>Home</h2>
+                    </Link>
+                    <Link to="/about">
+                        <h2 className='font-bold text-sm xs:text-xs text-gray-700'>About</h2>
+                    </Link>
+                    <Link to="/contact">
+                        <h2 className='font-bold text-sm xs:text-xs text-gray-700'>Contact</h2>
+                    </Link>
                     <Link to="/cart" className='relative'>
                         <FaShoppingCart className='font-bold text-xl xs:text-lg text-gray-700' />
                         {count !== 0 && (<div className='bg-gray-500 text-white text-[10px] rounded-full 
