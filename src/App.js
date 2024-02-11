@@ -2,23 +2,25 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import Footer from "./components/Footer";
-import { RouterProvider, createBrowserRouter } from "react-router-dom";
+import { RouterProvider, createBrowserRouter, Outlet } from "react-router-dom";
 import Restaurant from "./pages/Restaurant";
-import { Outlet } from "react-router-dom";
 import Contact from "./pages/Contact";
 import Cart from "./pages/Cart";
 import { Provider } from "react-redux";
 import { store } from './redux/store';
+import { Toaster } from "react-hot-toast";
 
 const router = createBrowserRouter([
   {
     path: "/",
     element: (
-      <>
-        <Navbar />
-        <Outlet />
+      <div className="flex flex-col justify-between min-h-[100vh]">
+        <div>
+          <Navbar />
+          <Outlet />
+        </div>
         <Footer />
-      </>
+      </div>
     ),
     children: [
       {
@@ -48,6 +50,7 @@ const router = createBrowserRouter([
 function App() {
   return (
     <Provider store={store}>
+      <Toaster />
       <RouterProvider router={router} />
     </Provider>
   );
