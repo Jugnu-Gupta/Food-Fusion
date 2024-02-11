@@ -19,7 +19,8 @@ const RestaurantCuisine = ({ foodItems, title }) => {
                             <Shimmer classess="w-10 h-6 mr-5 rounded-md" />
                         </>
                         : <>
-                            <h1 className={twMerge('text-xl font-bold', (hideItems ? 'mb-5' : ''))}>
+                            <h1 className={twMerge('text-xl font-bold',
+                                (hideItems ? 'mb-5' : ''))}>
                                 {title + ` (${foodItems.length})`}</h1>
 
                             <button onClick={() => setHideItems(!hideItems)}>
@@ -37,7 +38,8 @@ const RestaurantCuisine = ({ foodItems, title }) => {
                         return (<FoodItemShimmer key={index} printLine={(index + 1) !== 10} />)
                     }) :
                         foodItems.map((foodItem, index) => {
-                            return (<FoodItem key={foodItem?.card?.info?.id} foodItem={foodItem?.card?.info}
+                            return (<FoodItem key={foodItem?.card?.info?.id}
+                                foodItem={foodItem?.card?.info}
                                 printLine={(index + 1 !== foodItems.length)} />
                             )
                         })

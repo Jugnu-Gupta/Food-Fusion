@@ -6,7 +6,6 @@ import { useSelector } from 'react-redux';
 
 const Navbar = () => {
     const count = useSelector(store => store.cart.items.length);
-    const username = "";
 
     return (
         <div className='w-full shadow-xl'>
@@ -14,13 +13,6 @@ const Navbar = () => {
                 <div className=' w-16'>
                     <img src={logo} alt="logo" />
                 </div>
-
-                {
-                    username !== "" &&
-                    <div>
-                        {username}
-                    </div>
-                }
 
                 <div className='flex gap-6 items-center xs:gap-3'>
                     <Link to="/">
