@@ -32,17 +32,16 @@ const RestaurantCuisine = ({ foodItems, title }) => {
                         </>
                 }
             </div>
-            {
-                hideItems ? "" :
-                    !foodItems ? Array(10).fill("").map((element, index) => {
-                        return (<FoodItemShimmer key={index} printLine={(index + 1) !== 10} />)
-                    }) :
-                        foodItems.map((foodItem, index) => {
-                            return (<FoodItem key={foodItem?.card?.info?.id}
-                                foodItem={foodItem?.card?.info}
-                                printLine={(index + 1 !== foodItems.length)} />
-                            )
-                        })
+            {hideItems ? "" :
+                !foodItems ? Array(10).fill("").map((element, index) => {
+                    return (<FoodItemShimmer key={index} printLine={(index + 1) !== 10} />)
+                }) :
+                    foodItems.map((foodItem, index) => {
+                        return (<FoodItem key={foodItem?.card?.info?.id}
+                            foodItem={foodItem?.card?.info}
+                            printLine={(index + 1 !== foodItems.length)} />
+                        )
+                    })
             }
         </div >
     )

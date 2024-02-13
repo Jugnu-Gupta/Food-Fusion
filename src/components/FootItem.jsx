@@ -8,14 +8,14 @@ const FootItem = ({ foodItem, printLine }) => {
 
     return (
         <div>
-            <div className='py-5 flex justify-between gap-4 max-w-4xl'>
-                <div>
+            <div className='py-5 flex justify-between gap-4 max-w-4xl xs:gap-3'>
+                <div className='max-w-2xl'>
                     <p className='text-lg font-semibold'>{foodItem?.name}</p>
                     <p className='text-gray-900 font-medium'>₹ {price / 100}</p>
-                    <p className='text-gray-700 font-normal text-sm pt-2'>{foodItem?.description}</p>
+                    <p className='text-gray-700 font-normal text-xs pt-2'>{foodItem?.description}</p>
                 </div>
-                <div className='w-40 flex flex-col justify-center items-center'>
-                    {foodItem?.imageId && <div className='w-40'><img className="w-full h-32 rounded-md"
+                <div className='min-w-40 xs:min-w-32 flex flex-col justify-center items-center'>
+                    {foodItem?.imageId && <div className='w-40 xs:w-32'><img className="w-full h-32 xs:h-28 rounded-md"
                         src={IMG_API + foodItem?.imageId} alt="Restaurant image" loading='lazy' /></div>}
                     <ItemQtyCounter foodItem={foodItem} />
                 </div>

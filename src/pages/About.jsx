@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import photo from '../assets/photo.jpg';
 import burger from '../assets/burger.png';
 
 const About = () => {
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
+
     return (
         <div className='mt-5 max-w-4xl px-6 mx-auto'>
             <h1 className='text-center  text-2xl font-bold'>About Me</h1>

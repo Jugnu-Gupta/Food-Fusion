@@ -7,6 +7,7 @@ const useFetchRestaurantInfo = (restId) => {
 
     useEffect(() => {
         fetchRestaurantInfo();
+        window.scrollTo(0, 0);
     }, []);
 
     const fetchRestaurantInfo = async () => {

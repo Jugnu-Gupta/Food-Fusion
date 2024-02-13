@@ -1,3 +1,3 @@
-export const Restaurants_API = "https://food-villa-server.vercel.app/api/restaurants?lat=28.4594965&lng=77.0266383";
+export const Restaurants_API = "https://foodfire.onrender.com/api/restaurants?lat=21.1702401&lng=72.83106070000001&page_type=DESKTOP_WEB_LISTING";
 export const IMG_API = "https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/";
-export const RestaurantInfo_API = "https://food-villa-server.vercel.app/api/restaurant/menu?&lat=27.8973944&lng=78.0880129&menuId=";
+export const RestaurantInfo_API = "https://foodfire.onrender.com/api/menu?page-type=REGULAR_MENU&complete-menu=true&lat=21.1702401&lng=72.83106070000001&&submitAction=ENTER&restaurantId=";

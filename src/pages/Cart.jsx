@@ -12,6 +12,8 @@ const Cart = () => {
     const [itemTotal, setItemTotal] = useState(0);
 
     useEffect(() => {
+        window.scrollTo(0, 0);
+
         setItemTotal(foodItems.reduce((total, item) => {
             total = total + (item.price * item.quantity) / 100;
             return total;

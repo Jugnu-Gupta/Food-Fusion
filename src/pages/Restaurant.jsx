@@ -12,9 +12,9 @@ const Restaurant = () => {
 
     return (
         <>
-            {!restaurantInfo ? <RestShimmer /> :
-                <div className='bg-gray-900 py-5 px-6 w-full'>
-                    <div className="max-w-4xl w-full mx-auto text-white flex items-center justify-start gap-5 sm:gap-10">
+            <div className='bg-gray-900'>
+                {!restaurantInfo ? <RestShimmer /> :
+                    <div className="max-w-4xl w-full py-5 px-6 mx-auto text-white flex items-center justify-start gap-5 sm:gap-10">
                         <div>
                             <img className='w-60 h-48 rounded-md' src={IMG_API + restaurantInfo?.cloudinaryImageId}
                                 alt="Restuarant Img" loading='lazy' />
@@ -34,8 +34,8 @@ const Restaurant = () => {
                             <h2 className='text-gray-300 font-semibold'>{restaurantInfo?.areaName}</h2>
                         </div>
                     </div>
-                </div >
-            }
+                }
+            </div >
             <div className='bg-gray-300 my-5 max-w-4xl mx-auto'>
                 {
                     !menu || !menu.length ? <RestaurantCuisine foodItems={null} />
