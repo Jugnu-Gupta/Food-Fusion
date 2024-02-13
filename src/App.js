@@ -9,6 +9,7 @@ import Cart from "./pages/Cart";
 import { Provider } from "react-redux";
 import { store } from './redux/store';
 import { Toaster } from "react-hot-toast";
+import Error from "./pages/Error";
 
 const router = createBrowserRouter([
   {
@@ -22,6 +23,7 @@ const router = createBrowserRouter([
         <Footer />
       </div>
     ),
+    errorElement: (<Error />),
     children: [
       {
         path: "/",

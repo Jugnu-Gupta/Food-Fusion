@@ -10,8 +10,7 @@ const useFetchRestaurants = () => {
 
     const fetchRestaurants = async () => {
         try {
-            // const response = await fetch(Restaurants_API);
-            const response = await fetch("https://food-villa-server.vercel.app/api/restaurants?lat=28.4594965&lng=77.0266383");
+            const response = await fetch(Restaurants_API);
             const { data } = await response.json();
 
             setRestaurantList(data?.success?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants);
